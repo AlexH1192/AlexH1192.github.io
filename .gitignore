@@ -13,3 +13,9 @@ Thumbs.db
 
 # Vite/local cache
 .vite/
+
+# Local Codex skills/tooling
+.codex/
+
+# Local Claude skills/tooling
+.claude/
