@@ -13,7 +13,7 @@ const PROFILE = {
   linkedin: 'https://www.linkedin.com/in/alexander-haas-865710347/',
 };
 
-const ABOUT = `M.S. Computer Science student at USC focused on game development, gameplay systems, AI behavior, and technical design. I also serve as Head Trip Lead for the USC Rock Climbing Club, organizing weekly outdoor trips to Joshua Tree, Bishop, Yosemite, and Red Rocks.`;
+const ABOUT = `Graduate Computer Science student at USC, focused on Game Development, Gameplay Systems, AI Behavior, and Technical Design.`;
 
 /* ------------------------------------------------------------------ */
 /* EDUCATION                                                          */
@@ -44,6 +44,7 @@ const PROJECTS = [
     title: 'Mech Believe: Mega Brawl',
     role: 'AI & Gameplay Systems Engineer',
     dates: 'August 2025 – May 2026',
+    link: { platform: 'Steam', href: 'https://store.steampowered.com/app/4441100/Mech_Believe_MEGA_BRAWL/' },
     bullets: [
       'Designed and implemented real-time enemy AI systems in Unity and C# for Mech Believe: Mega Brawl, an arena combat action roguelite built around modular toy mech customization.',
       'Developed behavior logic for multiple enemy archetypes, including two common enemy types and two elite enemy types with distinct combat roles, movement patterns, and engagement behaviors.',
@@ -64,6 +65,7 @@ const PROJECTS = [
     title: 'Masterworks of Horror: The Prologue',
     role: 'Quality Assurance Lead',
     dates: 'August 2025 – May 2026',
+    link: { platform: 'Steam', href: 'https://store.steampowered.com/app/4436720/Masterworks_of_Horror_The_Prologue/' },
     bullets: [
       'Led QA testing for Masterworks of Horror: The Prologue, a real-time PvP card battler built around custom decks, horror literature, keyword-driven card effects, and strategic attack/defense playfield interactions.',
       'Managed the transition from physical paper prototype testing to recurring digital build testing as the project moved from tabletop validation into playable implementation.',
@@ -116,6 +118,7 @@ const PROJECTS = [
     title: 'Purr Force: Scratch and Rescue — IndieCade',
     role: 'Game Design Intern (Lead Programmer)',
     dates: 'May 2025 – July 2025',
+    link: { platform: 'itch.io', href: 'https://dacevedo11.itch.io/purr-force' },
     bullets: [
       'Led gameplay engineering on an 8-person interdisciplinary team developing Purr Force: Scratch and Rescue, a climate-focused real-time strategy game built in Unity and C#.',
       'Served as the team’s lead programmer, translating design goals into playable systems, implementation plans, and technical priorities throughout development.',
@@ -302,6 +305,7 @@ const PROJECTS = [
     title: 'On The Brink',
     role: 'Lead Unity Engineer',
     dates: 'May 2022 – November 2023',
+    link: { platform: 'Steam', href: 'https://store.steampowered.com/app/2347350/On_The_Brink/' },
     bullets: [
       'Led Unity engineering on On The Brink, a shipped sci-fi action/puzzle platformer developed by a 28-person interdisciplinary student team and published on Steam.',
       'Authored approximately 10,000 lines of C# across gameplay systems, player movement, combat interactions, AI behavior, progression mechanics, and implementation support.',
@@ -400,6 +404,7 @@ const PROJECTS = [
 const WORK = [
   {
     slug: 'usc-climbing-club',
+    kind: 'outdoor',
     title: 'Rock Climbing Club Executive Board — Head Trip Lead',
     org: 'University of Southern California',
     dates: 'December 2024 – May 2026',
@@ -430,6 +435,7 @@ const WORK = [
   },
   {
     slug: 'night-operations',
+    kind: 'work',
     title: 'Night Operations Manager',
     org: 'Copper Beech & Skyler Commons',
     dates: 'September 2023 – May 2024',
@@ -453,6 +459,7 @@ const WORK = [
   },
   {
     slug: 'climbing-wall-attendant',
+    kind: 'work',
     title: 'Climbing Wall Attendant',
     org: 'Barnes Center at The Arch — Syracuse University',
     dates: 'April 2021 – May 2023',
@@ -487,19 +494,26 @@ const WORK = [
 const SKILLS = [
   { group: 'Languages & Markup', items: 'C#, C++, Python, Java, JavaScript, HTML, CSS, SQL, MATLAB, Bash, PowerShell' },
   { group: 'Frameworks, Engines & Libraries', items: 'Unity (2D/3D), Unreal Engine 5, PrimeEngine, Direct3D 11, WPF, React, Vite, Node.js, npm, FastNoise Lite, Pandas, scikit-learn, Matplotlib' },
-  { group: 'Graphics & Rendering', items: '3D graphics programming, computer graphics, frustum culling, frustum plane extraction, AABB construction, AABB-vs-frustum testing, debug rendering, wireframe visualization, manual basis matrix construction, matrix transformations, view/projection transforms, row-major matrix conventions, back-face culling, skeletal animation blending, partial-body animation blending, additive animation layers, procedural generation, procedural texture generation, texture synthesis, image processing, PPM image generation' },
-  { group: 'AI, Search & Optimization', items: 'Finite state machines, state-driven behavior, behavior-driven decision logic, behavior trees (familiarity), enemy AI, guard/stealth detection AI, AI targeting, AI ability selection, AI patrol/chase states, line-of-sight detection, cone-based detection, slab-method segment-vs-AABB checks, hysteresis windows, stuck-detection fallbacks, board-state evaluation, tactical move scoring, opponent modeling, search algorithms, heuristic evaluation, depth-limited search, top-k search, legal move generation, liberty analysis, capture/defense detection, Go AI, Hidden Markov Models, Viterbi decoding, probabilistic inference, transition/emission probabilities, genetic algorithms, genetic programming, evolutionary computation, fitness functions, tournament/roulette/rank selection, crossover (uniform, two-point, adjacency-preserving), mutation (uniform, random, Gaussian, creep, segment-reversal), elitism, convergence analysis, hyperparameter tuning' },
-  { group: 'Algorithms & Math', items: 'Data structures, algorithms, dynamic programming, sequence alignment, Hirschberg’s algorithm, divide-and-conquer, two-row DP optimization, DP recurrence evaluation, DP backtracking, forward/reverse split scoring, path reconstruction, complexity analysis, runtime/memory benchmarking, numerical methods, scientific computing, numerical approximation, floating-point analysis, machine epsilon, Taylor series approximation, polynomial interpolation, Vandermonde systems, Chebyshev nodes, adaptive piecewise linear approximation, numerical differentiation, Newton-Cotes quadrature, Simpson-style integration, bisection, safeguarded Newton method, root-finding, tridiagonal LU factorization, bidiagonal substitution, banded Gaussian elimination, residual/error analysis' },
-  { group: 'Systems & Networking', items: 'C++ engine programming, custom engine architecture, scene graph systems, game object graph systems, custom event systems, event dispatch, asset manager workflows, mesh manager extension, fixed-size container debugging, manual memory patterns, engine-level debugging, driver-level crash debugging, renderer state debugging, physics subsystem implementation, sphere-vs-AABB collision, sweep-then-resolve collision, UDP sockets, UdpClient, IPEndPoint, localhost networking, BinaryFormatter, MemoryStream, serialization, multithreading, background receive threads, dispatcher-safe UI updates, DispatcherTimer' },
-  { group: 'Web & Deployment', items: 'React, Vite, Node.js, npm, GitHub Pages, GitHub Actions, static site deployment, build pipelines, component-based UI, single-page application development, responsive design, front-end debugging, browser console debugging, MIME type deployment debugging, version compatibility debugging' },
-  { group: 'Data & Analysis', items: 'Python data analysis, Pandas, scikit-learn, Matplotlib, CSV datasets, linear regression, regression modeling, R-squared analysis, residual analysis, trendline generation, data visualization, scatter plots, statistical reporting, predictive modeling' },
-  { group: 'Game Development & Gameplay', items: 'Gameplay engineering, player controls, camera-relative/third-person movement, gravity-based traversal, slingshot/momentum movement, dash mechanics, shield mechanics, combat systems, damage systems, ability systems, modular ability frameworks, cooldown logic, targeting systems, progression systems, puzzle mechanics, grid/tile-based systems, tile-state management, action point systems, environmental simulation, fire propagation logic, real-time strategy mechanics, turn-based systems, platforming systems, stealth/visibility mechanics, microphone input, real-time audio processing, voice-controlled mechanics, light radius systems, scene transitions, level progression, animation state control, difficulty/feel tuning, encounter pacing' },
-  { group: 'AR / VR', items: 'ARKit, iOS/mobile AR development, AR spatial tracking, VR development, motion-controller input, embodied interaction design, screen-to-world interaction, camera raycasting, ScreenPointToRay, Physics.Raycast, LineRenderer, Rigidbody physics, projectile systems, 3D physics, collision detection' },
-  { group: 'Software Engineering Practices', items: 'Object-oriented programming, modular software design, component-based architecture, event-driven architecture, state management, file parsing/generation, command-line interfaces, shell scripting, batch runners, error handling, debugging, performance profiling, code refactoring, system integration, input validation, application/socket cleanup' },
-  { group: 'QA & Production', items: 'Game QA, QA leadership, functional testing, gameplay testing, card-system testing, combinatorial testing, edge-case testing, regression testing, bug reproduction, Jira workflows, bug triage, reproduction-step documentation, video bug reports, severity context, external playtest supervision, paper prototype testing, digital build testing, playtest observation, usability feedback, rules validation, card/interaction testing, bot behavior testing, balance feedback' },
-  { group: 'Collaboration & Roles', items: 'Cross-disciplinary collaboration (designers, artists, QA, producers), lead programmer/gameplay/Unity roles, technical & feature ownership, rapid prototyping, rapid iteration, build delivery, Steam release experience, itch.io publishing, game jam development, climate/educational game development, interdisciplinary & large-team development, technical documentation/writing' },
-  { group: 'Climbing & Outdoor Safety', items: 'Top-rope climbing, lead climbing, outdoor bouldering, sport climbing, belay testing, belay instruction, belay certification verification, harness fitting, ATC use, rope checks, climbing gear inspection, working at height, fall risk awareness, first-time climber orientations, climbing etiquette instruction, fall protection awareness, rope systems familiarity, outdoor trip leadership, route selection, technical terrain supervision, outdoor risk management, mixed-ability group leadership, trip planning, transportation/gear logistics, safety briefings, group management, participant mentoring, emergency coordination, climbing club executive board experience' },
-  { group: 'Guest & Facility Operations', items: 'Guest check-in, customer service, rental gear management, equipment checkout/return, gear cleaning & sanitization, camping gear rental, tent inspection, sleeping bag/liner laundry, climbing shoe sanitization, chalk/liquid chalk maintenance, hold washing, route reset support, forerunning, route setting assistance, movement/difficulty feedback, wall maintenance, T-nut inspection/rethreading, facility cleaning, office upkeep, chalk vacuuming, mail delivery/organization, rent check intake, front desk support, shift reports, incident reports, room turnover, Airbnb-style check-in, guest-room prep, linen changes, property patrols, overnight/low-supervision operations, resident support, conflict de-escalation, dispute/complaint handling, lockout response, maintenance reporting, fire alarm response, fire department communication, adventure park operations, family-friendly guest experience' },
+  { group: 'Graphics & Rendering', items: '3D Graphics Programming, Computer Graphics, Frustum Culling, Frustum Plane Extraction, AABB Construction, AABB-vs-Frustum Testing, Debug Rendering, Wireframe Visualization, Manual Basis Matrix Construction, Matrix Transformations, View/Projection Transforms, Row-Major Matrix Conventions, Back-Face Culling, Skeletal Animation Blending, Partial-Body Animation Blending, Additive Animation Layers, Procedural Generation, Procedural Texture Generation, Texture Synthesis, Image Processing, PPM Image Generation' },
+  { group: 'AI, Search & Optimization', items: 'Finite State Machines, State-Driven Behavior, Behavior-Driven Decision Logic, Behavior Trees (Familiarity), Enemy AI, Guard/Stealth Detection AI, AI Targeting, AI Ability Selection, AI Patrol/Chase States, Line-of-Sight Detection, Cone-Based Detection, Slab-Method Segment-vs-AABB Checks, Hysteresis Windows, Stuck-Detection Fallbacks, Board-State Evaluation, Tactical Move Scoring, Opponent Modeling, Search Algorithms, Heuristic Evaluation, Depth-Limited Search, Top-K Search, Legal Move Generation, Liberty Analysis, Capture/Defense Detection, Go AI, Hidden Markov Models, Viterbi Decoding, Probabilistic Inference, Transition/Emission Probabilities, Genetic Algorithms, Genetic Programming, Evolutionary Computation, Fitness Functions, Tournament/Roulette/Rank Selection, Crossover (Uniform, Two-Point, Adjacency-Preserving), Mutation (Uniform, Random, Gaussian, Creep, Segment-Reversal), Elitism, Convergence Analysis, Hyperparameter Tuning' },
+  { group: 'Algorithms & Math', items: 'Data Structures, Algorithms, Dynamic Programming, Sequence Alignment, Hirschberg’s Algorithm, Divide-and-Conquer, Two-Row DP Optimization, DP Recurrence Evaluation, DP Backtracking, Forward/Reverse Split Scoring, Path Reconstruction, Complexity Analysis, Runtime/Memory Benchmarking, Numerical Methods, Scientific Computing, Numerical Approximation, Floating-Point Analysis, Machine Epsilon, Taylor Series Approximation, Polynomial Interpolation, Vandermonde Systems, Chebyshev Nodes, Adaptive Piecewise Linear Approximation, Numerical Differentiation, Newton-Cotes Quadrature, Simpson-Style Integration, Bisection, Safeguarded Newton Method, Root-Finding, Tridiagonal LU Factorization, Bidiagonal Substitution, Banded Gaussian Elimination, Residual/Error Analysis' },
+  { group: 'Systems & Networking', items: 'C++ Engine Programming, Custom Engine Architecture, Scene Graph Systems, Game Object Graph Systems, Custom Event Systems, Event Dispatch, Asset Manager Workflows, Mesh Manager Extension, Fixed-Size Container Debugging, Manual Memory Patterns, Engine-Level Debugging, Driver-Level Crash Debugging, Renderer State Debugging, Physics Subsystem Implementation, Sphere-vs-AABB Collision, Sweep-Then-Resolve Collision, UDP Sockets, UdpClient, IPEndPoint, Localhost Networking, BinaryFormatter, MemoryStream, Serialization, Multithreading, Background Receive Threads, Dispatcher-Safe UI Updates, DispatcherTimer' },
+  { group: 'Web & Deployment', items: 'React, Vite, Node.js, npm, GitHub Pages, GitHub Actions, Static Site Deployment, Build Pipelines, Component-Based UI, Single-Page Application Development, Responsive Design, Front-End Debugging, Browser Console Debugging, MIME Type Deployment Debugging, Version Compatibility Debugging' },
+  { group: 'Data & Analysis', items: 'Python Data Analysis, Pandas, scikit-learn, Matplotlib, CSV Datasets, Linear Regression, Regression Modeling, R-Squared Analysis, Residual Analysis, Trendline Generation, Data Visualization, Scatter Plots, Statistical Reporting, Predictive Modeling' },
+  { group: 'Game Development & Gameplay', items: 'Gameplay Engineering, Player Controls, Camera-Relative/Third-Person Movement, Gravity-Based Traversal, Slingshot/Momentum Movement, Dash Mechanics, Shield Mechanics, Combat Systems, Damage Systems, Ability Systems, Modular Ability Frameworks, Cooldown Logic, Targeting Systems, Progression Systems, Puzzle Mechanics, Grid/Tile-Based Systems, Tile-State Management, Action Point Systems, Environmental Simulation, Fire Propagation Logic, Real-Time Strategy Mechanics, Turn-Based Systems, Platforming Systems, Stealth/Visibility Mechanics, Microphone Input, Real-Time Audio Processing, Voice-Controlled Mechanics, Light Radius Systems, Scene Transitions, Level Progression, Animation State Control, Difficulty/Feel Tuning, Encounter Pacing' },
+  { group: 'AR / VR', items: 'ARKit, iOS/Mobile AR Development, AR Spatial Tracking, VR Development, Motion-Controller Input, Embodied Interaction Design, Screen-to-World Interaction, Camera Raycasting, ScreenPointToRay, Physics.Raycast, LineRenderer, Rigidbody Physics, Projectile Systems, 3D Physics, Collision Detection' },
+  { group: 'Software Engineering Practices', items: 'Object-Oriented Programming, Modular Software Design, Component-Based Architecture, Event-Driven Architecture, State Management, File Parsing/Generation, Command-Line Interfaces, Shell Scripting, Batch Runners, Error Handling, Debugging, Performance Profiling, Code Refactoring, System Integration, Input Validation, Application/Socket Cleanup' },
+  { group: 'QA & Production', items: 'Game QA, QA Leadership, Functional Testing, Gameplay Testing, Card-System Testing, Combinatorial Testing, Edge-Case Testing, Regression Testing, Bug Reproduction, Jira Workflows, Bug Triage, Reproduction-Step Documentation, Video Bug Reports, Severity Context, External Playtest Supervision, Paper Prototype Testing, Digital Build Testing, Playtest Observation, Usability Feedback, Rules Validation, Card/Interaction Testing, Bot Behavior Testing, Balance Feedback' },
+  { group: 'Collaboration & Roles', items: 'Cross-Disciplinary Collaboration (Designers, Artists, QA, Producers), Lead Programmer/Gameplay/Unity Roles, Technical & Feature Ownership, Rapid Prototyping, Rapid Iteration, Build Delivery, Steam Release Experience, itch.io Publishing, Game Jam Development, Climate/Educational Game Development, Interdisciplinary & Large-Team Development, Technical Documentation/Writing' },
+];
+
+/* ------------------------------------------------------------------ */
+/* OUTDOOR & LEADERSHIP SKILLS                                         */
+/* ------------------------------------------------------------------ */
+const OUTDOOR_SKILLS = [
+  { group: 'Outdoor Leadership', items: 'Outdoor Trip Leadership, Route Selection, Technical Terrain Supervision, Outdoor Risk Management, Mixed-Ability Group Leadership, Trip Planning, Transportation & Gear Logistics, Safety Briefings, Group Management, Participant Mentoring, Emergency Coordination, Climbing Club Executive Board Experience, Budget Management, Trip Lead Scheduling, Independent Judgment' },
+  { group: 'Climbing & Safety', items: 'Top-Rope Climbing, Lead Climbing, Outdoor Bouldering, Sport Climbing, Belay Testing, Belay Instruction, Belay Certification Verification, Harness Fitting, ATC Use, Rope Checks, Climbing Gear Inspection, Working at Height, Fall Risk Awareness, First-Time Climber Orientations, Climbing Etiquette Instruction, Fall Protection Awareness, Rope Systems Familiarity' },
+  { group: 'Guest & Facility Operations', items: 'Guest Check-In, Customer Service, Rental Gear Management, Equipment Checkout/Return, Gear Cleaning & Sanitization, Camping Gear Rental, Tent Inspection, Sleeping Bag/Liner Laundry, Climbing Shoe Sanitization, Chalk & Liquid Chalk Maintenance, Hold Washing, Route Reset Support, Forerunning, Route Setting Assistance, Movement/Difficulty Feedback, Wall Maintenance, T-Nut Inspection/Rethreading, Facility Cleaning, Office Upkeep, Chalk Vacuuming, Mail Delivery/Organization, Rent Check Intake, Front Desk Support, Shift Reports, Incident Reports, Room Turnover, Airbnb-Style Check-In, Guest-Room Prep, Linen Changes, Property Patrols, Overnight/Low-Supervision Operations, Resident Support, Conflict De-Escalation, Dispute/Complaint Handling, Lockout Response, Maintenance Reporting, Fire Alarm Response, Fire Department Communication' },
 ];
 
 /* ------------------------------------------------------------------ */
@@ -539,15 +553,18 @@ function Home() {
             <li key={p.slug}>
               <Link to={`/project/${p.slug}`}>{p.title}</Link>
               <span className="meta"> — {p.role} · {p.dates}</span>
+              {p.link && (
+                <span className="meta"> · <a href={p.link.href} target="_blank" rel="noreferrer">{p.link.platform} ↗</a></span>
+              )}
             </li>
           ))}
         </ul>
       </section>
 
       <section>
-        <h2>Work & Outdoor Experience</h2>
+        <h2>Work Experience</h2>
         <ul className="list">
-          {WORK.map((w) => (
+          {WORK.filter((w) => w.kind === 'work').map((w) => (
             <li key={w.slug}>
               <Link to={`/work/${w.slug}`}>{w.title}</Link>
               <span className="meta"> — {w.org} · {w.dates}</span>
@@ -557,10 +574,19 @@ function Home() {
       </section>
 
       <section>
-        <h2>Skills</h2>
-        {SKILLS.map((s) => (
-          <p key={s.group}><strong>{s.group}:</strong> {s.items}</p>
-        ))}
+        <h2>Technical Skills</h2>
+        <p>
+          Languages, Engines, AI, Graphics, Web, and Gameplay —{' '}
+          <Link to="/skills">See the full list →</Link>
+        </p>
+      </section>
+
+      <section>
+        <h2>Outdoor Experience and Leadership</h2>
+        <p>
+          Climbing Trip Leadership, Outdoor Risk Management, and Group Leadership —{' '}
+          <Link to="/outdoor">See the full list →</Link>
+        </p>
       </section>
 
       <section>
@@ -575,6 +601,56 @@ function Home() {
   );
 }
 
+function OutdoorPage() {
+  const roles = WORK.filter((w) => w.kind === 'outdoor');
+  return (
+    <main>
+      <p className="back"><Link to="/">← Back</Link></p>
+      <h1>Outdoor Experience and Leadership</h1>
+
+      <section>
+        <h2>Roles</h2>
+        <ul className="list">
+          {roles.map((w) => (
+            <li key={w.slug}>
+              <Link to={`/work/${w.slug}`}>{w.title}</Link>
+              <span className="meta"> — {w.org} · {w.dates}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section>
+        <h2>Skills</h2>
+        {OUTDOOR_SKILLS.map((s) => (
+          <div className="block" key={s.group}>
+            <h3>{s.group}</h3>
+            <p>{s.items}</p>
+          </div>
+        ))}
+      </section>
+
+      <p className="back"><Link to="/">← Back</Link></p>
+    </main>
+  );
+}
+
+function SkillsPage() {
+  return (
+    <main>
+      <p className="back"><Link to="/">← Back</Link></p>
+      <h1>Technical Skills</h1>
+      {SKILLS.map((s) => (
+        <div className="block" key={s.group}>
+          <h3>{s.group}</h3>
+          <p>{s.items}</p>
+        </div>
+      ))}
+      <p className="back"><Link to="/">← Back</Link></p>
+    </main>
+  );
+}
+
 function ItemPage({ source, kind }) {
   const { slug } = useParams();
   const item = source.find((x) => x.slug === slug);
@@ -585,6 +661,9 @@ function ItemPage({ source, kind }) {
       <p className="back"><Link to="/">← Back</Link></p>
       <h1>{item.title}</h1>
       <p className="meta">{item.role || item.org} · {item.dates}</p>
+      {item.link && (
+        <p><a href={item.link.href} target="_blank" rel="noreferrer">Play it on {item.link.platform} ↗</a></p>
+      )}
       <ul>
         {item.bullets.map((b, i) => <li key={i}>{b}</li>)}
       </ul>
@@ -600,6 +679,8 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/project/:slug" element={<ItemPage source={PROJECTS} kind="project" />} />
         <Route path="/work/:slug" element={<ItemPage source={WORK} kind="work" />} />
+        <Route path="/skills" element={<SkillsPage />} />
+        <Route path="/outdoor" element={<OutdoorPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </HashRouter>
